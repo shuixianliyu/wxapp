@@ -1,0 +1,11 @@
+<!--commons/banner/index.wxml-->
+
+ <swiper class="banner" autoplay="true" interval="5000" duration="300" indicator-dots="true" circular="true">
+      <block wx:for="{{banner_list}}" wx:key="item">
+        <swiper-item>
+            <view class="slide-title">{{item.title}}</view>
+            <image wx:if="{{item.picture}}" src="{{item.picture}}" class="slide-image" mode="aspectFill" />
+            <video wx:else src="{{item.url}}" controls style="width:100%;" duration="{{item.duration}}"></video>
+        </swiper-item>
+      </block>
+</swiper>

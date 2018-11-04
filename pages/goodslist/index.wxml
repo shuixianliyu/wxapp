@@ -1,0 +1,3 @@
+<!--pages/goodslist/index.wxml-->
+  <goodslist goods="{{list}}"></goodslist>
+

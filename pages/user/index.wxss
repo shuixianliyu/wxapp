@@ -1,0 +1,33 @@
+/* pages/user/index.wxss */
+
+.top {
+  background: #fff;
+}
+.user {
+  width: 100%;
+  text-align: center;
+}
+.avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  overflow: hidden;  
+}
+.detail {
+  display: flex;
+  flex-direction: row;
+  padding: 30rpx 0;
+}
+.common {
+  flex: 1;
+  box-sizing: border-box;
+  height: 130rpx;  
+  text-align: center;
+}
+.common:last-child {
+  border-left:1px solid #eee;
+}
+.number {
+  margin-bottom:20rpx;
+}

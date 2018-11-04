@@ -1,0 +1,58 @@
+<!--pages/order/index.wxml-->
+<view class='content'>
+  <view>
+    <view class='left'>
+      <view class='menu {{type==index?"active":""}}' bindtap='chooseMenu' wx:for='{{titleList}}' wx:key='titleList' data-index='{{index}}'>{{item}}</view>
+    </view>
+    <view class='right'>
+      <view class='menutitle'>{{menuTitle}}</view>
+      <scroll-view scroll-y class='scroll' scroll-into-view='{{tab}}' scroll-with-animation bindscroll='menuTab' bindscrolltolower='scrollbottom'>
+        <view class='menubox' style='padding-bottom:{{bottomheight}}px'>
+          <view wx:for='{{detailList}}' wx:key='detailList' id='list{{idx}}' wx:for-index="idx">
+            <view class='title'>{{item.title}}</view>
+            <view class='box'>
+              <view class='food' wx:for='{{item.foods}}' wx:key='food' wx:for-item="food">
+                <image src='{{food.img}}' catchtap='detail' data-index='{{index}}' data-menuindex='{{idx}}'></image>
+                <view class='detail'>
+                  <view class='name'>{{food.name}}</view>
+                  <view>
+                    <text class='price'>¥{{food.price}}</text>/份
+                  </view>
+                </view>
+                <view class="stepper">
+                  <text wx:if='{{food.count>0}}' bindtap="bindMinus" class="decrease" data-index='{{index}}' data-menuindex='{{idx}}'>-</text>
+                  <input wx:if='{{food.count>0}}' disabled='true' bindchange="bindManual" maxlength="3" type="number" value="{{food.count}}"></input>
+                  <text bindtap="bindPlus" class="normal" data-index='{{index}}' data-menuindex='{{idx}}'>+</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+<!-- <view class='discount'>单笔订单满20.00减1.00</view> -->
+<view class='nav'>
+  <view class='shopcart'>
+    <view>
+      <icon class='iconfont icon-shopcart {{num>0?"color":""}}' style='font-size:28px;margin:0 20px;vertical-align:middle;'></icon>
+      <view class='badge' wx:if="{{num>0}}">{{num}}</view>
+      <text wx:if="{{sum>0}}" class='cart sumPrice'>¥{{sum}}</text>
+      <text wx:else class='cart'>购物车是空的</text>
+    </view>
+  </view>
+  <view class='settlement {{num>0?"paycolor":""}}'>选好了</view>
+</view>
+<view class='mask {{isCover?"hidden":""}}' bindtap='close'>
+</view>
+<view class='info {{isCover?"hidden":""}}'>
+    <view class='image-header'>
+      <image src='{{selectfood.img}}'></image>
+    </view>
+    <view class='item-name'>{{selectfood.name}}</view>
+    <view class='item-price'>¥{{selectfood.price}}</view>
+    <view class='food-info'>
+      <text>{{selectfood.info}}</text>
+    </view>
+  </view>

@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class='info'>
+<banner banner_list='{{bannerlist}}'></banner>
+  <view class='title'>
+    <image src='/images/logo.jpg'></image>
+    <view class='center'>
+      <view class='name'>匠人专业美发沙龙</view>
+      <view class='time'>营业时间:10:00--22:00</view>
+    </view>
+    <button class='share' open-type='share' style='margin-left:0;margin-right:0;padding:0;background:none;line-height:1;margin-top:6rpx;'>
+      <image src='/images/nav/share.png' style='width:26px;height:26px;'></image>
+      <view style='font-size:30rpx;margin-top:16rpx;'>分享</view>
+    </button>
+  </view>
+  <view class='address' bindtap='mapViewTap'>
+    <icon class="iconfont icon-position commonIcon"></icon>
+    <text>成都市天府五街美年广场A座634号</text>
+    <van-icon name="arrow" style='float:right;margin-top:8px;color:#999;font-size:12px;line-height:24px;'></van-icon>
+  </view> 
+  <view class='address' bindtap='callPhone'>
+    <icon class="iconfont icon-tel commonIcon"></icon>
+    <text>联系电话：{{phone}}</text>
+    <van-icon name="arrow" style='float:right;margin-top:5px;color:#999;font-size:12px;line-height:24px;'></van-icon>
+  </view>
+  <view class='service'>
+    <view>
+      <icon class='iconfont icon-park color'></icon>
+      <text>临时停车</text>
+    </view>
+    <view>
+      <icon class='iconfont icon-park color'></icon>
+      <text>免费茶水</text>
+    </view>
+    <view>
+      <icon class='iconfont icon-pay color'></icon>
+      <text>微信支付</text>
+    </view>
+  </view>
+</view>
+<view class='blank'></view>
+<navigator class='order' url='/pages/order/index' hover-class='none'>
+  <text>扫码点餐</text>
+  <button type='warn' size='mini' class='button'>扫码</button>
+</navigator>
+<view class='blank'></view>
+<navigator class='order' url='/pages/check/index' hover-class='none'>
+  <text>优惠买单</text>
+  <button type='warn' size='mini' class='button'>买单</button>
+</navigator>
+<view class='blank'></view>
+<view class='food'>
+    <cell-group>
+      <cell title="美食精选" is-link url='/pages/goodslist/index?title=1'/>
+    </cell-group>
+  <goodslist goods='{{goodslist}}'></goodslist>
+</view>
+<view class='blank'></view>
+<view class='food'>
+    <cell-group>
+      <cell title="门店环境" is-link url='/pages/goodslist/index?title=2'/>
+    </cell-group>
+  <goodslist goods='{{placelist}}'></goodslist>
+</view>

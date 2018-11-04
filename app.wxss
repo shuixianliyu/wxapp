@@ -1,0 +1,48 @@
+/**app.wxss**/
+
+page {
+  font-size: 30rpx;
+}
+.blank {
+  width: 100%;
+  height: 20rpx;
+  background: #f4f4f4;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 863318 */
+  src: url('//at.alicdn.com/t/font_863318_r8x7p7ns4p.eot');
+  src: url('//at.alicdn.com/t/font_863318_r8x7p7ns4p.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_863318_r8x7p7ns4p.woff') format('woff'),
+  url('//at.alicdn.com/t/font_863318_r8x7p7ns4p.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_863318_r8x7p7ns4p.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-tel:before{
+  content: '\e610';
+}
+.icon-position:before{
+  content: '\e628';
+}
+.icon-park:before{
+  content:'\e627';
+}
+.icon-pay:before{
+  content:'\e611';
+}
+.icon-choose:before{
+  content:'\e632';
+  font-size: 20px;
+  color:#cc1c19;
+  vertical-align: top;
+}
+.icon-shopcart:before{
+  content:'\e600';  
+}

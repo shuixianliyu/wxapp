@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "banner": "/components/gemu/banner/index",
+    "cell": "/components/vant/cell/index",
+    "cell-group": "/components/vant/cell-group/index",
+    "van-icon":"/components/vant/icon/index",
+    "goodslist":"/components/gemu/goods-list/index"
+  }
+}

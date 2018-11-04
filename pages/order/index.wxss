@@ -1,0 +1,265 @@
+/* pages/order/index.wxss */
+
+page {
+  background: #f4f4f4;
+}
+
+.content {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+
+.left .menu {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #7a7676;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.right {
+  display: inline-block;
+  width: 70%;
+  background: #fff;
+}
+
+.menutitle {
+  position: fixed;
+  z-index: 66;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  padding-left: 20rpx;
+  border-left: 8rpx solid #74bbba;
+  background: #f4f4f4;
+  color: #74bbba;
+}
+
+.scroll {
+  height: 100vh;
+}
+
+/* .menubox {
+  padding-bottom: 510px;
+} */
+
+.menubox .title {
+  height: 25px;
+  line-height: 25px;
+  background: #f4f4f4;
+  padding-left: 28rpx;
+  color: #b4b3b3;
+}
+
+.menubox .box {
+  padding: 0 28rpx;
+}
+
+.menubox .food {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  padding: 14px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.menubox .food image {
+  width: 60px;
+  height: 60px;
+}
+
+.menubox .food .detail {
+  width: 70%;
+  margin-left: 20rpx;
+  font-size: 14px;
+  color: #b4b3b3;
+  overflow: hidden;
+}
+
+.detail .name {
+  margin-bottom: 37rpx;
+  color: #333131;
+}
+
+.price {
+  color: #b32929;
+}
+
+.stepper {
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+}
+
+.stepper input {
+  display: inline-block;
+  width: 60rpx;
+  height: 40rpx;
+  min-height: 40rpx;
+  vertical-align: -5rpx;
+  text-align: center;
+}
+
+.stepper .decrease, .normal {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 40rpx;
+  vertical-align: middle;
+}
+
+.decrease {
+  box-sizing: border-box;
+  border: 1px solid #a7a5a5;
+  line-height: 30rpx!important;
+  color: #a7a5a5;
+}
+
+.normal {
+  color: #fff;
+  background-color: #74bbba;
+}
+
+.discount {
+  position: fixed;
+  bottom: 90rpx;
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  background: #ecb856;
+  text-align: center;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+}
+
+.shopcart, .settlement {
+  display: inline-block;
+  height: 100%;
+  line-height: 100rpx;
+}
+
+.shopcart {
+  position: relative;
+  width: 70%;
+  background: #74bbba;
+  color: #fff;
+}
+
+.badge {
+  position: absolute;
+  left: 40px;
+  top: 15rpx;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  border-radius: 50%;
+  text-align: center;
+  background: #f44;
+  font-size: 20rpx;
+  color: #fff;
+}
+
+.cart {
+  vertical-align: middle;
+}
+
+.sumPrice {
+  font-size: 24px;
+  letter-spacing: 3rpx;
+}
+
+.settlement {
+  width: 30%;
+  color: #b4b3b3;
+  text-align: center;
+}
+
+.active {
+  background: #fff;
+  border-left: 8rpx solid #74bbba;
+  color: #74bbba;
+}
+
+.color {
+  color: #ecb856;
+  font-size: 60rpx;
+}
+
+.paycolor {
+  background: #e29b17;
+  color: #fff;
+}
+
+/* 弹出层 */
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: rgba(58, 57, 57, 0.5);
+}
+
+.info {
+  position: fixed;
+  left: 50%;
+  top: 200rpx;
+  width: 500rpx;
+  margin-left: -250rpx;
+  z-index: 100;
+  background: #fff;
+  border-radius: 20rpx;
+}
+
+.info image {
+  width: 500rpx;
+  height: 500rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.item-name, .item-price, .info text {
+  padding-left: 20rpx;
+}
+
+.item-name {
+  color: #333131;
+}
+
+.item-price {
+  color: #b32929;
+}
+
+.food-info {
+  height: 200rpx;
+  border-top: 1px solid #ccc;
+}
+
+.food-info text {
+  color: #b4b3b3;
+}
+
+.hidden {
+  display: none;
+}

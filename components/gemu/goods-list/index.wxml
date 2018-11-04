@@ -1,0 +1,17 @@
+<view class='allProducts'>
+  <view class='products' wx:for='{{goods}}' wx:key="item">
+    <!-- 商品列表 -->
+    <view wx:if='{{item.name}}'>
+      <view class='img'>
+        <image src='{{item.imgNail}}' bindtap="previewImage" data-src="{{item.imgNail}}"></image>
+      </view>
+      <view class='mb-10 text-more-2'>{{item.name}}</view>
+    </view>
+    <!-- 门店 -->
+     <view wx:else>
+      <view class='img'>
+        <image src='{{item.imgNail}}' bindtap="previewImage" data-src="{{item.imgNail}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
